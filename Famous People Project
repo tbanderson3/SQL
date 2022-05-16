@@ -5,12 +5,14 @@ CREATE TABLE billionares (
     fullname TEXT,
     age INTEGER,
     nationality TEXT);
-    
-INSERT INTO billionares (fullname, age, nationality) VALUES ("Jeff Bezos", 54, "US");
-INSERT INTO billionares (fullname, age, nationality) VALUES ("Bill Gates", 62, "US");
-INSERT INTO billionares (fullname, age, nationality) VALUES ("Warren Buffet", 87, "US");
-INSERT INTO billionares (fullname, age, nationality) VALUES ("Bernard Arnault", 69, "France");
-INSERT INTO billionares (fullname, age, nationality) VALUES ("Mark Zuckerberg", 33, "US");
+
+INSERT INTO billionares (fullname, age, nationality) VALUES ("Elon Musk", 50, "SA");
+INSERT INTO billionares (fullname, age, nationality) VALUES ("Bernard Arnault", 73, "France");
+INSERT INTO billionares (fullname, age, nationality) VALUES ("Jeff Bezos", 58, "US");
+INSERT INTO billionares (fullname, age, nationality) VALUES ("Bill Gates", 66, "US");
+INSERT INTO billionares (fullname, age, nationality) VALUES ("Warren Buffet", 91, "US");
+INSERT INTO billionares (fullname, age, nationality) VALUES ("Mark Zuckerberg", 38, "US");
+
 
 CREATE TABLE wealth (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -18,11 +20,12 @@ CREATE TABLE wealth (
     net_worth TEXT,
     source_wealth TEXT);
     
-INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (1, "112 billion", "Amazon");
-INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (2, "90 billion", "Microsoft");
-INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (3, "84 billion", "Berkshire Hathaway");
-INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (4, "72 billion", "LVMH");
-INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (5, "71 billion", "Facebook");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (1, "232 billion", "Tesla");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (4, "144 billion", "LVMH");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (1, "140 billion", "Amazon");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (2, "133 billion", "Microsoft");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (3, "115 billion", "Berkshire Hathaway");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (5, "72 billion", "Facebook");
 
 SELECT billionares.fullname, wealth.net_worth
 FROM billionares
