@@ -1,0 +1,23 @@
+--Create a clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, size TEXT);
+
+INSERT INTO store VALUES(1, "Hat",5, 100, "L");
+INSERT INTO store VALUES(2, "Shirt",15, 30, "L");
+INSERT INTO store VALUES(3, "Pants",10, 25, "M");
+INSERT INTO store VALUES(4, "Jeans",20, 50, "L");
+INSERT INTO store VALUES(5, "Socks",20, 50, "S");
+INSERT INTO store VALUES(6, "Leggings",20, 50, "S");
+INSERT INTO store VALUES(7, "Bras",20, 50, "M");
+INSERT INTO store VALUES(8, "Underwear",20, 50, "M");
+INSERT INTO store VALUES(10, "Scarf",20, 50, "M");
+INSERT INTO store VALUES(11, "Tank Top",20, 50, "XL");
+INSERT INTO store VALUES(12, "Skirt",20, 50, "M");
+INSERT INTO store VALUES(13, "Dress",20, 50, "M");
+INSERT INTO store VALUES(14, "Bathing Suit",20, 50, "S");
+INSERT INTO store VALUES(15, "Bikini",20, 50, "L");
+
+SELECT * FROM store
+ORDER BY price;
+
+SELECT SUM(quantity) FROM store;
