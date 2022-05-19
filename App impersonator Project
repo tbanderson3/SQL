@@ -1,0 +1,40 @@
+/* Creating a table that tracks work schedules */
+
+
+CREATE TABLE User (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    First_name TEXT,
+    Last_name text,
+    age INTEGER,
+    address text,
+    Hrs_sleep integer,
+    Hrs_work integer,
+    Hrs_internet_browse integer,
+    Mood text 
+    );
+    
+/* Inserting Data ino work schedule */
+
+INSERT INTO User (First_name, Last_name, age, address, Hrs_sleep, Hrs_work, Hrs_internet_browse, Mood) VALUES ("Trevor", "A", 29, "Madison, AL 35756",5, 10, 2, "Tired" ); 
+
+INSERT INTO User (First_name, Last_name, age, address, Hrs_sleep, Hrs_work, Hrs_internet_browse, Mood) VALUES ("Rylee", "L", 24, "Athens, AL 35613",8, 8, 2, "Energized" );
+
+INSERT INTO User (First_name, Last_name, age, address, Hrs_sleep, Hrs_work, Hrs_internet_browse, Mood) VALUES ("Mike", "T", 26, "Madison, AL 35801",5, 8, 4, "Sleepy" );
+
+INSERT INTO User (First_name, Last_name, age, address, Hrs_sleep, Hrs_work, Hrs_internet_browse, Mood) VALUES ("Jacob", "P", 27, "Athens, AL 35613",3, 12, 1, "Exhausted" );
+
+/* Selecting all rows from User for display */
+
+Select * from User;
+
+/* Changing record regarding mood */
+
+UPDATE User SET Mood = "Tired" WHERE First_name = "Mike" ;
+
+/* Deleting age section */
+
+Delete From User Where age = "29";
+
+/*Checking if the change worked */
+
+Select * From User;
